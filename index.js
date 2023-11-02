@@ -54,6 +54,7 @@ const generateData = (assets) => {
   core.setOutput('diff_file_string', fileSize(stats.total.diff))
   core.setOutput('percent', stats.total.diffPercentage.toFixed(2))
   core.setOutput('success', 'true')
+  core.setOutput('raw', JSON.stringify(stats, null, 2))
 }
 
 const run = async () => {
