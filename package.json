@@ -1,6 +1,6 @@
 {
   "name": "bundle-size-diff",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Github action for getting bundle size diffs for PR's",
   "main": "index.js",
   "scripts": {
