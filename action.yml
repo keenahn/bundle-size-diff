@@ -28,9 +28,11 @@ outputs:
     description: 'Formatted diff size between branches'
   percent:
     description: 'Diff size of compared presented in percentage'
+  raw:
+    description: 'Raw JSON output of the diff'
 branding:
   icon: bar-chart-2
   color: orange
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
