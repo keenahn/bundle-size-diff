@@ -1,5 +1,4 @@
 const core = require('@actions/core')
-const fileSize = require('filesize')
 const path = require('path')
 const { getStatsDiff } = require('webpack-stats-diff')
 
@@ -47,11 +46,8 @@ const generateData = (assets) => {
   }
 
   core.setOutput('base_file_size', stats.total.oldSize)
-  core.setOutput('base_file_string', fileSize(stats.total.oldSize))
   core.setOutput('pr_file_size', stats.total.newSize)
-  core.setOutput('pr_file_string', fileSize(stats.total.newSize))
   core.setOutput('diff_file_size', stats.total.diff)
-  core.setOutput('diff_file_string', fileSize(stats.total.diff))
   core.setOutput('percent', stats.total.diffPercentage.toFixed(2))
   core.setOutput('success', 'true')
   core.setOutput('raw', JSON.stringify(stats, null, 2))
